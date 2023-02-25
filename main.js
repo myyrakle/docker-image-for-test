@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
 app.get("/ip", (req, res) => {
   let network = networkInterfaces();
 
-  res.json(network);
+  res.send(network?.eth0?.[0]?.address);
 });
 
 app.listen(80, () => {});
