@@ -6,4 +6,4 @@ RUN apt-get install nodejs -y
 WORKDIR /home
 RUN git clone https://github.com/myyrakle/docker-image-for-test
 WORKDIR /home/docker-image-for-test/node-daemon-for-test
-ENTRYPOINT [ "sh", "/home/docker-image-for-test/node-server-for-test/run.sh" ]
+ENTRYPOINT [ "sh", "/home/docker-image-for-test/node-daemon-for-test/run.sh" ]
