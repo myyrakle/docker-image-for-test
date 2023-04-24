@@ -13,4 +13,8 @@ app.get("/ip", (req, res) => {
   res.send(network?.eth0?.[0]?.address);
 });
 
+app.get("/echo/environments", (req, res) => {
+  res.json(process.env);
+});
+
 app.listen(80, () => {});
