@@ -6,4 +6,5 @@ RUN apt-get install nodejs -y
 WORKDIR /home
 RUN git clone https://github.com/myyrakle/docker-image-for-test
 WORKDIR /home/docker-image-for-test/node-server-for-test
+EXPOSE 80
 ENTRYPOINT [ "sh", "/home/docker-image-for-test/node-server-for-test/run.sh" ]
