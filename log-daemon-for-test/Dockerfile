@@ -5,8 +5,8 @@ RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash
 RUN apt-get install nodejs -y
 WORKDIR /home
 RUN git clone https://github.com/myyrakle/docker-image-for-test
-RUN mv ./docker-image-for-test/daemon-for-test ./server
-RUN rm -rf ./docker-image-for-test
-WORKDIR /home/docker-image-for-test/log-daemon-for-test
+RUN mv /home/docker-image-for-test/log-daemon-for-test ./server
+RUN rm -rf /home/docker-image-for-test
+WORKDIR /home/server
 EXPOSE 80
 ENTRYPOINT [ "sh", "/home/server/run.sh" ]

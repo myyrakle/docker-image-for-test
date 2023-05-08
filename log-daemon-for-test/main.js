@@ -10,7 +10,7 @@ async function main() {
   while (true) {
     const text = `# running on: ${myAddress} at ${new Date().toISOString()}`;
 
-    if (existsSync(outputDirectory)) {
+    if (!existsSync(outputDirectory)) {
       mkdirSync(outputDirectory);
     }
 
