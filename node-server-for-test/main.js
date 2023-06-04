@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/version", (req, res) => {
-  res.send("Version:1");
+  res.send("Version:2");
 });
 
 app.get("/ip", (req, res) => {
