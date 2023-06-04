@@ -7,11 +7,14 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
-app.get("/version", (req, res) => {
-  res.send("Version:1");
+app.get("/ip", (req, res) => {
+  let network = networkInterfaces();
+
+  res.send(network?.eth0?.[0]?.address);
 });
 
-app.get("/ip", (req, res) => {
+app.get("/remote/ip", (req, res) => {
+  let host = process.env.REMOTE_HOST || "localhost";
   let network = networkInterfaces();
 
   res.send(network?.eth0?.[0]?.address);
